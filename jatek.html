@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zombie run!</title>
+    <link rel="stylesheet" href="jatek.css">
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+    <script>
+        function startGame() {
+            document.getElementById("canvas").style.visibility = "visible";
+
+        };
+    </script>
+    <script>
+        function gameInstructions() {
+            window.open("jatekh.html");
+
+            window.alert("A játékról: [nyomj OK-t!]");
+            window.alert("Lődd le az ellenséget!");
+            window.alert("Nyilak: mozgás, SPACE: tűz");
+
+        };
+    </script>
+
+
+</head>
+<body>
+<ul id="navBar">
+    <li><button onclick="goBack()">Vissza</button></li>
+    <li>Játékprogramok beadandó</li>
+</ul>
+<h1>Zombie run!</h1>
+<button onclick="startGame()">Játék indítása</button>
+<button onclick="gameInstructions()">Instrukciók</button>
+<p>2016 - Dobay Zsolt Gergő</p>
+<p>Utolsó módosítás: random ellenfél generálás
+mozgás: wasd</p>
+<h3>Következő frissítés:</h3>
+<div style="text-align: center;">
+    <table class="CountdownTable" id="table4" border="1" cellpadding="0" cellspacing="0">
+        <tbody><tr>
+            <td style="width: 50px;">
+                Nap
+            </td>
+            <td style="width: 50px;">
+                Óra
+            </td>
+            <td style="width: 50px;">
+                Perc
+            </td>
+            <td style="width: 50px;">
+                Másodperc
+            </td>
+        </tr>
+        <tr>
+            <td id="eD0" rowspan="2">0</td>
+            <td id="eH0" style="border-bottom: solid 1px black;">0</td>
+            <td id="eM0" style="border-bottom: solid 1px black;">0</td>
+            <td id="eS0" style="border-bottom: solid 1px black;">0</td>
+        </tr>
+        <tr>
+            <td id="eH1">0</td>
+            <td id="eM1">0</td>
+            <td id="eS1">0</td>
+        </tr>
+        </tbody></table>
+</div>
+
+<canvas id="canvas" width="800" height="400"></canvas>
+
+<script src="framework.js"></script>
+<script src="createEnemy.js"></script>
+<script src="zombi.js"></script>
+<script src="hos.js"></script>
+<script src="clock.js"></script>
+<script src="jatek.js"></script>
+</html>
+</body>

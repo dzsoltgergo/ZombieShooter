@@ -1,0 +1,11 @@
+canvas {
+    background-image: url("bg_img.jpg");
+    background-repeat: repeat;
+}
+.CountdownTable
+{
+    font-size: 12px;
+}
+body {
+     background-color: #d8ffcc;
+}
